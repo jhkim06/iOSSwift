@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     var imageName: String?
     var currentImage: UIImage?
     let maxImageNum = 3
+  
+    @IBOutlet var forwardBtn: UIButton!
+    @IBOutlet var backwardBtn: UIButton!
     
     @IBOutlet var imgView: UIImageView!
     
@@ -25,12 +28,25 @@ class ViewController: UIViewController {
         currentImage = UIImage(named: imageName!)
         
         imgView.image = currentImage
+        
+        forwardBtn.setTitle("다음", for:.normal)
+        backwardBtn.setTitle("이전", for: .normal)
     }
     
     @IBAction func goForwardBtn(_ sender: UIButton) {
         numImage = numImage! + 1
         if(numImage! > maxImageNum){
             numImage = 1
+        }
+        imageName = String(numImage!) + ".jpeg"
+        currentImage = UIImage(named: imageName!)
+        imgView.image = currentImage
+    }
+    
+    @IBAction func goBackwardBtn(_ sender: UIButton) {
+        numImage = numImage! - 1
+        if(numImage! < 1){
+            numImage = maxImageNum
         }
         imageName = String(numImage!) + ".jpeg"
         currentImage = UIImage(named: imageName!)
