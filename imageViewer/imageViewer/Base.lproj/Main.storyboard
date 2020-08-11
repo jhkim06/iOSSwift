@@ -35,12 +35,20 @@
                                     <action selector="goBackwardBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cft-QG-49g"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCx-yE-SsG">
+                                <rect key="frame" x="47" y="626" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backwardBtn" destination="Tet-X6-ifH" id="lO3-1P-0ag"/>
+                        <outlet property="dateString" destination="uCx-yE-SsG" id="Wyg-zT-GZF"/>
                         <outlet property="forwardBtn" destination="tmR-rr-Zkl" id="Cqv-gm-xXK"/>
                         <outlet property="imgView" destination="pgo-2i-sUk" id="qhj-xy-iP1"/>
                     </connections>
