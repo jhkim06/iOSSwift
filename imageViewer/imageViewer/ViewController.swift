@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var currentImage: UIImage?
     let maxImageNum = 3
     
+    
     var currentDate: Date?
     var dateFormatter: DateFormatter?
     @IBOutlet var dateString: UILabel!
@@ -31,11 +32,13 @@ class ViewController: UIViewController {
         imageName = String(numImage!) + ".jpeg"
         currentImage = UIImage(named: imageName!)
         
+        // Current date
         currentDate = Date()
         dateFormatter = DateFormatter()
         dateFormatter!.dateStyle = .full
         dateString.text = dateFormatter!.string(from: currentDate!)
         //dateString.text = "날짜"
+        
         
         imgView.image = currentImage
         
@@ -58,6 +61,7 @@ class ViewController: UIViewController {
         if(numImage! < 1){
             numImage = maxImageNum
         }
+        
         imageName = String(numImage!) + ".jpeg"
         currentImage = UIImage(named: imageName!)
         imgView.image = currentImage
